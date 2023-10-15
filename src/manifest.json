@@ -1,0 +1,33 @@
+{
+    "manifest_version": 3,
+    "version": "1.0.0",
+    "name": "Chrome Extension Scaffold",
+    "description": "Painlessly achieving a modern frontend development experience for Chrome extensions.",
+    "homepage_url": "https://github.com/wildseeder/chrome-extension-scaffold",
+    "background": {
+      "service_worker": "background/index.js"
+    },
+    "action": {
+      "default_title": "Chrome Extension Scaffold"
+    },
+    "options_page": "main/index.html",
+    "icons": {
+      "128": "assets/icons/icon-128.png",
+      "48": "assets/icons/icon-48.png",
+      "32": "assets/icons/icon-32.png",
+      "16": "assets/icons/icon-16.png"
+    },
+    "content_scripts": [
+      {
+        "matches": [
+          "https://*/*",
+          "http://*/*"
+        ],
+        "js": [
+          "contentScript/index.js"
+        ],
+        "run_at": "document_start"
+      }
+    ]
+  }
+  
