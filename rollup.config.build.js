@@ -36,11 +36,11 @@ export default [
             dest: 'build',
           },
           {
-            src: 'src/assets/**/*',
+            src: 'src/assets/*',
             dest: 'build/assets',
           },
           {
-            src: 'src/main/build/**/*',
+            src: 'src/main/build/*',
             dest: 'build/main',
           },
         ],
